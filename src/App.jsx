@@ -8,6 +8,7 @@ import Feed from "./components/Feed";
 import Profile from "./components/Profile";
 import { Toaster } from "react-hot-toast";
 import Connection from "./components/Connection";
+import Request from "./components/Request";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
               <Route path="login" element={<Login />} />
               <Route path="feed" element={<Feed />} />
               <Route path="profile" element={<Profile />} />
-              <Route path="connection" element={<Connection />} />
+              <Route path="connections" element={<Connection />} />
+              <Route path="requests" element={<Request />} />
             </Route>
             <Route
               path="/profile"

@@ -7,7 +7,7 @@ import { addConnections } from '../utils/connectionSlice';
 
 const Connection = () => {
   const connections = useSelector((store) => store.connections);
-
+  console.log(connections);
   const dispatch = useDispatch();
 
 
@@ -50,18 +50,10 @@ const Connection = () => {
                 <h4>{age + " " + gender}</h4>
                 <h3>{about}</h3>
               </div>
-
-
-
-
-
             </div>);
         }
-
-
         )}
       </div>
-
     </div>
   );
 };
