@@ -11,11 +11,15 @@ const NavBar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleLogout = async () => {
-    await axios.post(BASE_URL + "/logout", {
+    const res = await axios.post(BASE_URL + "/logout", {}, {
       withCredentials: true,
     });
+    console.log(res);
     dispatch(removeUser());
-    return navigate("/login");
+    if (res.status === 200) {
+      navigate("/login");
+    }
+
   };
   return (
     user && (
@@ -59,7 +63,9 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <a>Settings</a>
+                  <Link to="/feed" className="justify-between">
+                    Feed
+                  </Link>
                 </li>
                 <li>
                   <a onClick={handleLogout}>Logout</a>

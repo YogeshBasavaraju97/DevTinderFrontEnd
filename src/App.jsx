@@ -24,17 +24,7 @@ function App() {
               <Route path="connections" element={<Connection />} />
               <Route path="requests" element={<Request />} />
             </Route>
-            <Route
-              path="/profile"
-              element={
-                <div>
-                  Profile
-                  <Outlet />
-                </div>
-              }
-            >
-              <Route path="/profile/navbar" element={<div>Navbar</div>}></Route>
-            </Route>
+
           </Routes>
         </BrowserRouter>
       </Provider>

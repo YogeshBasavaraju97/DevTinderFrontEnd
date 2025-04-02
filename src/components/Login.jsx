@@ -8,8 +8,8 @@ import { use } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [emailId, setEmailId] = useState("yogesh@gmail.com");
-  const [password, setPassword] = useState("Yog@2339");
+  const [emailId, setEmailId] = useState("");
+  const [password, setPassword] = useState("");
   const [isLoginForm, setIsLoginForm] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -124,9 +124,9 @@ const Login = () => {
 
           {error && <p className="text-red-400">{error}</p>}
           <div className="card-actions justify-center">
-            <button className="btn btn-primary" >
+            <div className="btn btn-primary" >
               {isLoginForm ? <button onClick={handleSignIn}>SignUp</button> : <button onClick={handleLogin}>Login</button>}
-            </button>
+            </div>
           </div>
           <p>{isLoginForm ? <button onClick={() => setIsLoginForm(!isLoginForm)}> existing user: Login</button> : <button onClick={() => setIsLoginForm(!isLoginForm)}> New user : SignIn</button>}</p>
         </div>

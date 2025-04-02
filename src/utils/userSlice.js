@@ -8,6 +8,7 @@ const userSlice = createSlice({
       return action.payload;
     },
     removeUser: (state, action) => {
+      console.log("Removing user...");
       return null;
     },
   },
