@@ -30,8 +30,13 @@ const Feed = () => {
   }, []);
 
 
+  if (!feed) return;
+
+  if (feed && feed.length === 0) { return (<div>No users found</div>); }
+
+
   return feed && (
-    <div className='flex justify-center mt-5'><UserCard user={feed[4]} /></div>
+    <div className='flex justify-center mt-5'><UserCard user={feed[0]} /></div>
   );
 };
 
