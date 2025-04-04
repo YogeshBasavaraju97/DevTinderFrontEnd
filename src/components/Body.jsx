@@ -17,6 +17,8 @@ const Body = () => {
         withCredentials: true,
       });
 
+      dispatch(addUser(response.data));
+
 
     } catch (error) {
       if (error.status === 401) {
